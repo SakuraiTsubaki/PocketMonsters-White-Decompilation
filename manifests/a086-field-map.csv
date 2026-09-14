@@ -1,0 +1,28 @@
+field_index,raw_name,provisional_name,status,evidence
+0,u16_00,representative_zone_id,confirmed,Joins exactly to the representative ZoneHeader for all 61 areas; area 14 switches Black zone 0 to White zone 424.
+1,u16_01,constant_1,structural,Constant value 1 in all 61 records in both versions; runtime meaning not traced.
+2,u16_02,map_center_x_candidate,high-confidence inferred,"Equals fields 4, 6, and 8 for all records; paired with field 3 as a repeated coordinate."
+3,u16_03,map_center_y_candidate,high-confidence inferred,Equals field 5; fields 7 and 9 are exactly y-4 and y+4.
+4,u16_04,map_center_x_dup,structural,Exactly equals field 2 for all records.
+5,u16_05,map_center_y_dup,structural,Exactly equals field 3 for all records.
+6,u16_06,map_center_x_dup2,structural,Exactly equals field 2 for all records.
+7,u16_07,map_center_y_minus4,structural,Exactly field 3 minus 4 for all records.
+8,u16_08,map_center_x_dup3,structural,Exactly equals field 2 for all records.
+9,u16_09,map_center_y_plus4,structural,Exactly field 3 plus 4 for all records.
+10,u16_10,constant_8,structural,Constant value 8 in all 61 records in both versions.
+11,u16_11,display_class_candidate,high-confidence inferred,Values 0..5 cluster by settlement/route/landmark classes; exact engine enum names not yet traced.
+12,u16_12,has_fly_flag_candidate,high-confidence inferred,Exactly 1 iff field 15 is not 0xFFFF; 16 records qualify.
+13,u16_13,constant_0_a,structural,Constant zero in all records.
+14,u16_14,constant_0_b,structural,Constant zero in all records.
+15,u16_15,fly_unlock_flag_candidate,high-confidence inferred,16 non-FFFF values are 2480..2495; area destinations match flyable settlement/League locations. Comparative Gen IV code also uses 2480+ for flypoint flags; Gen V symbol trace remains pending.
+16,u16_16,special_condition_id_candidate,inferred,"Only Liberty Garden=0xF000 and Unity Tower=0xF001; likely special unlock/condition selectors, exact use not traced."
+17,u16_17,map_component_id_0,high-confidence inferred,First of up to seven world-map component IDs. Version swaps match Opelucid and Black City/White Forest graphics/components.
+18,u16_18,map_component_id_1,high-confidence inferred,Second component ID; version-specific at area 14.
+19,u16_19,map_component_id_2,high-confidence inferred,Additional component ID or 0xFFFF.
+20,u16_20,map_component_id_3,high-confidence inferred,Additional component ID or 0xFFFF.
+21,u16_21,map_component_id_4,high-confidence inferred,Additional component ID or 0xFFFF.
+22,u16_22,map_component_id_5,high-confidence inferred,Additional component ID or 0xFFFF.
+23,u16_23,map_component_id_6,high-confidence inferred,Additional component ID or 0xFFFF.
+24,u16_24,shape_or_style_code_candidate,inferred,"Values 0..15; correlates with route/bridge/landmark presentation, but exact renderer semantics are not traced."
+25,u16_25,label_anchor_x_candidate,high-confidence inferred,Coordinate-like; generally offsets from center and may be 0xFFFF for Anville Town. Exact consumer not traced.
+26,u16_26,label_anchor_y_candidate,high-confidence inferred,Coordinate-like partner to field 25; exact consumer not traced.
