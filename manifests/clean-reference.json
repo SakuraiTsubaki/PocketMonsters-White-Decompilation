@@ -1,16 +1,32 @@
 {
-  "schema_version": 1,
-  "reference_role": "project_clean_reference",
+  "schema_version": 2,
+  "reference_role": "canonical_clean_reference",
   "game": "Pokémon White Version",
-  "source_filename": "Pokemon.White.Version.EUR.NDS-SweeTnDs.nds",
+  "region": "USA/Europe",
+  "revision": "Version 1.0",
+  "platform_mode": "NDSi Enhanced",
   "size_bytes": 268435456,
-  "crc32": "EDCD5161",
-  "md5": "8DFEF9A099E1269AF5C1FCF9D7736A11",
-  "sha1": "F94D4578956487C09FEE20809A591E858017769E",
-  "sha256": "93E4F473CE9A0543BCCF2E689ECD07AB4FCC39DD00FB4F194343CBD5E70E17ED",
-  "nds_header": {"internal_title":"POKEMON W","game_code":"IRAO","revision":0,"unit_code":2},
-  "filesystem": {"fat_entries":484,"named_nitrofs_files":247,"narc_files":237,"arm9_overlays":237},
-  "handling": {"rom_binary_committed":false,"source_access":"read-only","derived_outputs_may_be_committed":true},
-  "provenance_status": "exact local project reference; archival dump provenance not asserted by this manifest",
-  "paired_reference": "Pokémon Black Version EUR project reference"
+  "crc32": "B552501C",
+  "md5": "77C34BA77F8FA44E7CAF04F695DB0560",
+  "sha1": "BC696A0DFB448C7B3A8A206F0F8214411A039208",
+  "sha256": "B288BB061FD646894F5059F55CD0A1EFB13B4F0CFD3D9E06E9E42A5BD9431AC6",
+  "verification": {
+    "classification": "good/canonical reference",
+    "sources": [
+      "TASVideos game-version database",
+      "OpenRetro No-Intro-tagged record",
+      "independent ROM-hack clean-base documentation"
+    ]
+  },
+  "local_input": {
+    "sha1": "F94D4578956487C09FEE20809A591E858017769E",
+    "matches_clean_reference": false,
+    "role": "immutable raw input only",
+    "details": "See manifests/rom-baseline.json and manifests/raw-input-reference.json"
+  },
+  "handling": {
+    "rom_binary_committed": false,
+    "canonical_reference_binary_required_in_repository": false,
+    "derived_outputs_may_be_committed": true
+  }
 }
