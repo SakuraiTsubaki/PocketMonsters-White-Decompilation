@@ -1,0 +1,6 @@
+record_index,record_byte_offset,absolute_offset,black_hex,white_hex,black_u16_if_aligned,white_u16_if_aligned
+9,34,520,2D,2C,45,44
+14,0,756,00,A8,0,424
+14,1,757,00,01,,
+14,34,790,38,3A,56,58
+14,36,792,39,3B,57,59
