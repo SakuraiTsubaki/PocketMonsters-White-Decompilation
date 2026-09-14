@@ -6,6 +6,38 @@ This reconstruction phase assumes **no local retail ROM is available**. Research
 
 No byte-level claim is treated as verified merely because it is commonly repeated. Findings that normally require direct ROM inspection must remain explicitly marked as unverified until corroborated by public evidence or multiple independent technical sources.
 
+## Canonical survey axis: Japan first, all official regions compared
+
+The project uses the **original Japanese release as the baseline reference point** for the regional survey. This is a comparison baseline, not an assumption that the Japanese build is always technically superior or free of later fixes.
+
+Every officially released regional, territorial, and language build discovered during research must be inventoried independently and compared back to the Japanese baseline. Regional builds must never be collapsed into a single generic "international" version.
+
+For every difference, record the most specific applicable category:
+
+- release / revision identity
+- executable or overlay change
+- filesystem / NARC structure change
+- game-data value change
+- script / event / flag behavior change
+- map / object / encounter change
+- text / encoding / font / UI localization change
+- graphics / model / palette / animation change
+- audio / sequence / voice / sound-effect change
+- online / communication / service behavior change
+- Mystery Gift / distribution / regional event difference
+- censorship, legal, ratings, or localization adaptation
+- bug fix / regression / revision-specific correction
+- packaging or manual-only difference
+- currently unclassified difference
+
+The survey order is therefore:
+
+1. Establish the Japanese baseline release(s) and revision identity.
+2. Inventory every other official regional/language build.
+3. Compare each build directly against the Japanese baseline.
+4. Compare non-Japanese builds against one another when differences do not derive cleanly from Japan.
+5. Record later revisions separately rather than silently merging them into their launch-region entry.
+
 ## Evidence classes
 
 - **Primary / official** — official manuals, websites, service notices, distribution notices, developer or publisher material.
@@ -74,25 +106,29 @@ Survey Black/White pages, subpages, prototype/debug material, unused text, graph
 
 ## Survey workstreams
 
-1. Release/version/revision inventory by region and language.
-2. Nintendo DS / DSi cartridge structure and executable layout.
-3. NitroFS file tree and NARC path catalog from public research.
-4. ARM9, ARM7 and overlay symbol/function research.
-5. Script command set, event structure, flags and variables.
-6. Map headers, matrices, models, collision, overworld objects and warps.
-7. Pokémon personal data, forms, moves, abilities, items and encounter tables.
-8. Trainers, parties, AI and battle rules.
-9. Text encoding, message archives, fonts and localization differences.
-10. Graphics: Pokémon, trainers, overworlds, UI, tiles, models, palettes and animation.
-11. Audio: SDAT structure, sequences, banks, waves, streams and dynamic-music behavior.
-12. Save format, checksums, event work and communication state.
-13. C-Gear, infrared, local wireless, Wi-Fi, Entralink and Game Sync.
-14. Pokémon Global Link, Dream World and downloadable customization content.
-15. Mystery Gifts, regional event distributions and preserved PGF data.
-16. Unused, dummy, debug and development leftovers.
-17. Bugs, glitches, revision fixes and localization-specific corrections.
-18. Black/White versus Black 2/White 2 continuity and structural differences.
+1. Japanese baseline release/version/revision inventory.
+2. Full official regional/language/revision inventory.
+3. Japanese-baseline-to-region difference matrix.
+4. Nintendo DS / DSi cartridge structure and executable layout.
+5. NitroFS file tree and NARC path catalog from public research.
+6. ARM9, ARM7 and overlay symbol/function research.
+7. Script command set, event structure, flags and variables.
+8. Map headers, matrices, models, collision, overworld objects and warps.
+9. Pokémon personal data, forms, moves, abilities, items and encounter tables.
+10. Trainers, parties, AI and battle rules.
+11. Text encoding, message archives, fonts and localization differences.
+12. Graphics: Pokémon, trainers, overworlds, UI, tiles, models, palettes and animation.
+13. Audio: SDAT structure, sequences, banks, waves, streams and dynamic-music behavior.
+14. Save format, checksums, event work and communication state.
+15. C-Gear, infrared, local wireless, Wi-Fi, Entralink and Game Sync.
+16. Pokémon Global Link, Dream World and downloadable customization content.
+17. Mystery Gifts, regional event distributions and preserved PGF data.
+18. Unused, dummy, debug and development leftovers.
+19. Bugs, glitches, revision fixes and localization-specific corrections.
+20. Black/White versus Black 2/White 2 continuity and structural differences.
 
 ## Research rule
 
 The goal is not to copy one wiki or one tool. Each subsystem should be reconstructed from multiple independent source classes where possible, with conflicts recorded rather than silently resolved.
+
+The Japanese release is always the starting comparison baseline, while every other official regional/language/revision build remains a first-class research target with its own evidence, differences, and uncertainty state.
