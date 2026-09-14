@@ -1,0 +1,48 @@
+id,class,name,url,scope,state,evidence_role
+OFF-JP-BW-NIN,official,Nintendo Japan Black/White,https://www.nintendo.co.jp/ds/irbj/index.html,BW official product/release,Registered,Official primary
+OFF-JP-BW-PKM,official,Pokemon.co.jp Black/White,https://www.pokemon.co.jp/series/bw/,BW official site tree,Enumerating,Official primary
+OFF-JP-B2W2-NIN,official,Nintendo Japan Black2/White2,https://www.nintendo.co.jp/ds/irej/index.html,B2W2 official product/release,Registered,Official primary
+OFF-JP-B2W2-PKM,official,Pokemon.co.jp Black2/White2,https://www.pokemon.co.jp/ex/b2w2/,B2W2 official site tree,Enumerating,Official primary
+OFF-KR-BW,official,Pokemon Korea Black/White,https://pokemonkorea.co.kr/game/view/5236,Korean BW official product info,Registered,Official primary
+OFF-KR-B2W2,official,Pokemon Korea Black2/White2,https://pokemonkorea.co.kr/game/view/5237,Korean B2W2 official product info,Registered,Official primary
+OFF-US-MANUALS,official,Nintendo DS Manuals,https://en-americas-support.nintendo.com/app/answers/detail/a_id/16905/,Official instruction booklets,Enumerating,Official primary
+OFF-WFC-US,official,Nintendo Wi-Fi shutdown US,https://en-americas-support.nintendo.com/app/answers/detail/a_id/6026/,Online service termination,Registered,Official primary
+OFF-WFC-JP,official,Nintendo Wi-Fi shutdown JP,https://support.nintendo.com/jp/information/2014/0227.html,Online service termination,Registered,Official primary
+ARCH-WAYBACK,preservation,Internet Archive Wayback,https://web.archive.org/,Dead official sites and historical captures,Enumerating,Preservation
+PP-EVENT5,preservation,Project Pokemon Gen5 Event Gallery,https://projectpokemon.org/home/files/category/4-generation-5/,Wonder Cards and event Pokemon,Enumerating,Preservation
+PP-DW,preservation,Project Pokemon Dream World,https://projectpokemon.org/home/files/category/8-dream-world/,Dream World Pokemon,Enumerating,Preservation
+PP-CGEAR,preservation,Project Pokemon C-Gear,https://projectpokemon.org/home/files/category/48-c-gear-skins/,C-Gear DLC,Enumerating,Preservation
+PP-GEN5-TUT,technical,Project Pokemon Gen5 Tutorials,https://projectpokemon.org/home/tutorials/save-editing/gen-5/,Gen5 save subsystems,Enumerating,Reverse engineering
+PP-SAVETOOL,technical,Gen5 Save Tool,https://projectpokemon.org/home/files/file/649-generation-5-save-tool/,BW/B2W2 save structures,Registered,Direct technical
+PP-B2W2-ROM,technical,B2W2 General ROM Info,https://projectpokemon.org/home/forums/topic/22629-b2w2-general-rom-info/,B2W2 NARC and formats,Registered,Reverse engineering
+PP-SAVE-2024,technical,B2W2 Save Structure Update,https://projectpokemon.org/home/forums/topic/65609-updating-b2w2-save-structure-documentation/,Save block research,Registered,Reverse engineering
+PP-EVENT-CONTRIB,preservation,Gen I-V Event Contributions,https://projectpokemon.org/home/forums/topic/37431-gen-i-v-event-contributions-thread/,Server-format Gen5 DLC,Enumerating,Preservation
+PP-RAWDB,technical,Project Pokemon RawDB,https://projectpokemon.org/rawdb/,NARC and file indexes,Enumerating,Direct technical
+GH-PPRE,code,PPRE,https://github.com/projectpokemon/PPRE,Historic GenV editor/path maps,Enumerating,Direct technical
+GH-PKHEX,code,PKHeX,https://github.com/kwsch/PKHeX,PK5 PGF save legality,Enumerating,Direct technical
+GH-BWTOOL,code,BW_tool,https://github.com/suloku/BW_tool,Gen5 save structures,Registered,Direct technical
+GH-PKMDS,code,PKMDS Save Editor,https://github.com/codemonkey85/PKMDS-Save-Editor,Gen5 save/PKM,Registered,Direct technical
+GH-TRAINER,code,TrainerTyrant,https://github.com/ThirdLemon/TrainerTyrant,Trainer/learnset structures,Registered,Direct technical
+GH-SAK,code,SwissArmyKnife,https://github.com/PlatinumMaster/SwissArmyKnife,Maps text scripts zones encounters,Enumerating,Direct technical
+GH-FROST,code,FrostsGen5Editor,https://github.com/FrostFalcon/FrostsGen5Editor,Broad Gen5 editor implementation,Enumerating,Direct technical
+GH-CTRMAP,code,CTRMap-CE,https://github.com/ds-pokemon-hacking/CTRMap-CE,Gen5 map/level framework,Enumerating,Direct technical
+GH-ANIMA,code,AnimaEngine,https://github.com/KillDaWill/AnimaEngine,Battle sprite reconstruction,Enumerating,Direct technical
+GH-PDSMS,code,Pokemon DS Map Studio,https://github.com/Trifindo/Pokemon-DS-Map-Studio,Gen5 map model pipeline,Registered,Direct technical
+GH-ANDT,code,ANDT,https://github.com/javierhimura/ANDT,Historic Gen5 editor code,Enumerating,Direct technical
+GH-NDSPY,infrastructure,ndspy,https://github.com/RoadrunnerWMC/ndspy,DS ROM/NitroFS/NARC formats,Enumerating,Direct technical
+GH-NARC,infrastructure,narc,https://github.com/lhearachel/narc,NARC implementation,Registered,Direct technical
+GH-TINKE,infrastructure,Tinke,https://github.com/pleonex/tinke,Nitro resource tool,Enumerating,Direct technical
+GH-TINKEDSI,infrastructure,TinkeDSi,https://github.com/R-YaTian/TinkeDSi,DSi-enhanced resource handling,Enumerating,Direct technical
+DSPKM-DOC,technical,DS Pokemon Hacking Docs,https://ds-pokemon-hacking.github.io/docs/,Gen5 technical guides,Enumerating,Reverse engineering
+TCRF,development,The Cutting Room Floor,https://tcrf.net/,Unused/prerelease/regional differences,Blocked,Preservation
+DATACRYSTAL,development,Data Crystal,https://datacrystal.tcrf.net/,ROM hacking knowledge,Enumerating,Secondary reference
+BULBAPEDIA,secondary,Bulbapedia,https://bulbapedia.bulbagarden.net/,Release/localization/mechanics/events,Enumerating,Secondary reference
+SEREBII,secondary,Serebii,https://www.serebii.net/blackwhite/,Events/mechanics/locations/distributions,Enumerating,Secondary reference
+POKEDB,secondary,Pokemon Database,https://pokemondb.net/,Pokemon/move/game reference,Registered,Secondary reference
+GAMEFAQS,secondary,GameFAQs,https://gamefaqs.gamespot.com/,Regional product codes/dates,Enumerating,Secondary reference
+NOINTRO,catalog,No-Intro DAT-o-MATIC,unknown,Retail revisions/hashes,Candidate,Preservation
+PHYSICAL-SCANS,preservation,Box/cart/manual scans,unknown,Region/revision identity,Enumerating,Preservation
+GUIDES,official-secondary,Official/authorized guides,unknown,Contemporary game documentation,Candidate,Official/secondary
+MAGAZINES,development,Contemporary magazines/press,unknown,Prerelease/interviews/screenshots,Candidate,Preservation
+SOUNDTRACK,official,Official soundtrack releases,unknown,Audio/track metadata,Candidate,Official primary
+BUG-RESEARCH,technical,Bug/glitch research,unknown,Reproduction and revision fixes,Candidate,Reverse engineering
