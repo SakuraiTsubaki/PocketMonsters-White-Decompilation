@@ -1,6 +1,6 @@
 # Project Status
 
-**Current stage:** Public-source survey and reconstruction baseline
+**Current stage:** Exhaustive public-source census and reconstruction baseline
 
 This project assumes no local retail ROM is available. Work therefore begins from publicly accessible official material, technical implementations, preservation archives, reverse-engineering research, historical web captures, and independently maintained references.
 
@@ -12,43 +12,45 @@ This project assumes no local retail ROM is available. Work therefore begins fro
 - Public-reference hashes are not project-level `Matched` evidence.
 - Unknown values remain `TBD`/`Unknown`.
 - GitHub is the authoritative project record; retail ROM binaries remain excluded.
+- **Subsystem work must not replace the exhaustive public-source census.**
 
-## Progress
+## Source-census priority
 
-- [x] Establish public-source-first research methodology.
-- [x] Create initial public source inventory (`docs/PUBLIC_SOURCE_SURVEY.md`).
-- [x] Seed Japanese baseline and major regional/language targets in `docs/VERSIONS.md`.
-- [x] Create Japanese-baseline regional comparison ledger (`docs/REGIONAL_SURVEY_MATRIX.md`).
-- [x] Seed evidence-backed NitroFS/NARC path catalog (`docs/NARC_PATH_CATALOG.md`).
-- [x] Add machine-readable NARC path inventory (`manifests/narc-paths.csv`).
-- [x] Record first BW ↔ B2W2 path-movement findings and public-source conflicts.
+- [x] Create `docs/SOURCE_REGISTRY.md`.
+- [x] Add `manifests/source-registry.csv`.
+- [x] Register official regional roots, manuals, service history, preservation collections, major public tools/code, prerelease/unused sources, catalog/revision sources and secondary databases.
+- [ ] Enumerate every relevant child page/file/release/record under every registered source root.
+- [ ] Enumerate Wayback/Internet Archive captures for dead official and regional sites.
+- [ ] Enumerate every official event/distribution/service notice by region and language.
+- [ ] Enumerate historical Gen V tools/research whose original hosting disappeared.
+- [ ] Resolve blocked TCRF material through indexed or archived evidence.
+- [ ] Keep all unresolved classes visibly open; do not claim `all public sources surveyed` early.
+
+## Reconstruction progress
+
+- [x] Public-source-first methodology and `PUBLIC_SOURCE_SURVEY.md`.
+- [x] Japanese baseline and major regional/language targets seeded in `VERSIONS.md`.
+- [x] Japanese-baseline regional comparison ledger added.
+- [x] Evidence-backed NARC/NitroFS catalog and machine-readable manifest added.
+- [x] First BW ↔ B2W2 path movements and public-source conflicts recorded.
 - [ ] Complete every official territory, packaging, language, and revision target.
 - [ ] Find White-specific archive/file-tree census preservation evidence.
-- [ ] Establish which exact White region/revision each public tool/research source tested.
-- [ ] Document executable and overlay layout from public technical evidence.
-- [ ] Map symbols, functions, and major subsystems where public evidence permits.
-- [ ] Document game-data formats and resource containers at record/field level.
-- [ ] Reconstruct scripts, events, flags, variables, and behavior.
-- [ ] Reconstruct asset pipelines and metadata.
-- [ ] Reconstruct save, communication, online, and distribution structures.
-- [ ] Catalog unused, dummy, debug, and development material.
-- [ ] Add reproducible tooling that does not redistribute retail ROM binaries.
-- [ ] Add automated verification where practical.
+- [ ] Establish exact White region/revision tested by public tools/research sources.
+- [ ] Document executable/overlay layout, symbols, formats, scripts, events, assets, save/online/distribution structures, unused material and bugs.
+- [ ] Add reproducible tooling and verification where practical.
 
 ## Current technical baseline
 
-Public implementations and B/W research currently support White path leads for text, personal data, learnsets, evolutions, moves, items, scripts, trainers, overworld/event data, and encounters. Unlike Black, the public Project Pokémon Raw DB index does not expose a White tree, so White-specific archive member counts remain `TBD` instead of inheriting Black's counts.
-
-The first structural comparison already establishes that scripts, trainer metadata/parties, overworld events, and encounters move to different archive paths in B2W2.
+Public implementations and B/W research support White path leads for text, personal data, learnsets, evolutions, moves, items, scripts, trainers, overworld/event data, and encounters. Unlike Black, the public Project Pokémon Raw DB index does not expose a White tree, so White-specific archive member counts remain `TBD` instead of inheriting Black's counts.
 
 ## Validation handling
 
-Repository-standard verification remains `Unverified` → `Observed` → `Reproduced` → `Matched`. Research documents may additionally describe public evidence as corroborated, direct technical, single-source, preserved, or conflicted, but these labels do not replace project-level target verification.
+Repository-standard verification remains `Unverified` → `Observed` → `Reproduced` → `Matched`. Public evidence labels such as corroborated, preserved, direct technical or conflicted never replace target verification.
 
 ## Next milestones
 
-1. Locate White-specific file-tree/archive census evidence.
-2. Expand each known NARC from path-level identity into file/record format documentation.
-3. Start with high-value data families: personal data, moves, evolutions/learnsets, trainers, encounters, text, and scripts.
-4. Continue regional comparison from product identity into actual localization/technical differences.
-5. Keep `VERSIONS.md`, regional matrix, NARC catalog, manifests, and this status synchronized.
+1. Enumerate the registered source universe before narrowing to a single subsystem.
+2. Expand Japanese official sources first, then all regional/language official and archived branches.
+3. Enumerate event/DLC preservation and public code repositories at item/file level.
+4. Locate White-specific archive census evidence in parallel.
+5. Keep source registry, source manifest, versions, regional matrix, NARC catalog and this status synchronized.
