@@ -38,6 +38,28 @@ The survey order is therefore:
 4. Compare non-Japanese builds against one another when differences do not derive cleanly from Japan.
 5. Record later revisions separately rather than silently merging them into their launch-region entry.
 
+## GitHub is the authoritative project record
+
+All research results and reproducible project outputs must be committed to this GitHub repository. Chat conversations, temporary notes, and local scratch work are not treated as the authoritative project state until the result is preserved in GitHub.
+
+Except for retail ROM images or other excluded ROM binaries, the repository should retain all generated or collected project work that can be lawfully and appropriately preserved here, including:
+
+- source registries and bibliographies
+- regional / language / revision inventories
+- comparison matrices and difference logs
+- technical notes and reverse-engineering documentation
+- decompilation / reconstruction source
+- scripts and tooling
+- manifests, metadata, hashes, checksums, and verification records
+- reconstructed data tables and machine-readable datasets
+- graphics, sprites, palettes, maps, audio metadata, and other extracted/reconstructed project assets when appropriate
+- test results, validation logs, and reproducibility procedures
+- unused / dummy / debug / bug / glitch research
+- online-service, Mystery Gift, distribution, and archival research
+- uncertainty records and unresolved conflicts between sources
+
+A research item is considered integrated into the project only after its evidence, interpretation, and resulting artifact or record have been committed to GitHub.
+
 ## Evidence classes
 
 - **Primary / official** — official manuals, websites, service notices, distribution notices, developer or publisher material.
