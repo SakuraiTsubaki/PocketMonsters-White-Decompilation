@@ -22,26 +22,29 @@ Observed uncompressed White overlay IDs:
 
 The remaining payloads use the Nintendo DS backwards executable-code compression format handled by the current bootstrap tooling.
 
-## Black / White exact-payload candidates
+## Zero-filled overlay entries
 
 The following **57** overlay IDs have byte-identical compressed payloads and byte-identical decompressed payloads in the observed Black and White inputs:
 
 `5, 66, 84, 85, 86, 87, 89, 108, 113, 126, 130, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 169, 189, 190, 191, 192, 193, 200, 201, 202, 226, 229, 232, 233, 234, 235, 236`
 
-These are the strongest first-pass candidates for a shared Black/White source implementation. Identical payload bytes do **not** imply that every overlay-table address field is identical; relocation/load-layout metadata is tracked separately.
+Every one of these 57 entries expands to **exactly 32 zero bytes** in both observed versions. They are therefore tracked as **zero-filled structural overlay entries**, not as reconstructed common code.
 
-Only five overlay-table entries are completely identical across the two observed tables: IDs `95, 139, 140, 141, 142`.
+Their runtime purpose is not yet established. In particular, zero-filled payloads must not be labelled “unused” until overlay-loading references and execution paths are checked. Some may be placeholders, stubs, reserved overlay slots, or entries whose meaningful behavior is supplied elsewhere.
+
+Only five overlay-table entries are completely identical across the two observed tables: IDs `95, 139, 140, 141, 142`. Four of those (`139..142`) belong to the zero-filled set; overlay 95 is a separate uncompressed non-zero entry.
 
 ## Current matched source
 
-- [Overlay 74](overlay_0074.md) — first reconstructed source unit; 544-byte decompressed payload matched byte-for-byte in both Black and White using the same assembly source and version-specific link address.
+- [Overlay 74](overlay_0074.md) — first reconstructed non-zero source unit; 544-byte decompressed payload matched byte-for-byte in both Black and White using the same assembly source and version-specific link address.
 
-Overlay 74 is intentionally not in the 57-byte-identical list: its logic/table are shared, while one absolute table-pointer literal relocates with the version-specific `+0x20` load-address shift.
+Overlay 74 differs only by an absolute table-pointer relocation caused by the version-specific `+0x20` load-address shift; its code and 26-record table are otherwise shared.
 
 ## Reconstruction order
 
-1. Reconstruct small/shared overlays first and verify exact decompressed payload hashes.
-2. Separate address-only relocation differences from code/data differences.
-3. Promote structural labels to semantic names only after call sites, data consumers, or external evidence verify their purpose.
-4. Preserve version-specific link/load data instead of forcing Black and White into one binary layout.
-5. Keep full-ROM preservation-clean matching separate from per-overlay matches against the identified observational inputs.
+1. Trace references to zero-filled overlay IDs before assigning used/unused/placeholder semantics.
+2. Reconstruct small non-zero overlays and verify exact decompressed payload hashes.
+3. Separate address-only relocation differences from code/data differences.
+4. Promote structural labels to semantic names only after call sites, data consumers, or external evidence verify their purpose.
+5. Preserve version-specific link/load data instead of forcing Black and White into one binary layout.
+6. Keep full-ROM preservation-clean matching separate from per-overlay matches against the identified observational inputs.
