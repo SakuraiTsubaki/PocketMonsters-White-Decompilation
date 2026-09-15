@@ -1,6 +1,6 @@
 # Pocket Monsters White — Decompilation
 
-![Status](https://img.shields.io/badge/status-initial_setup-lightgrey)
+![Status](https://img.shields.io/badge/status-active_reconstruction-blue)
 ![Project](https://img.shields.io/badge/project-decompilation-blue)
 ![ROMs](https://img.shields.io/badge/ROM_binaries-not_included-success)
 
@@ -15,7 +15,9 @@ Decompilation and source-reconstruction project for **Pokémon White**.
 
 ## 🚧 Status
 
-This repository is in its **initial setup** stage. Source reconstruction and documentation will be added progressively.
+This repository is in **active reconstruction**. The initial NDS filesystem/executable inventory is recorded, Black/White version differences are being mapped, and the first ARM9 overlay source unit now rebuilds byte-for-byte against the observed decompressed payload.
+
+The currently supplied IRAO image is a documented underdump and is retained only as identified observational evidence. Preservation-clean full-ROM matching remains a separate target.
 
 ## 🗂️ Planned scope
 
@@ -33,16 +35,19 @@ ROM images and redistributed ROM binaries are **not included**. The repository i
 
 ## 🧭 Roadmap
 
-- [ ] Establish baseline version/revision inventory
-- [ ] Map executable and data structures
-- [ ] Begin source reconstruction
-- [ ] Document assets, scripts, and formats
-- [ ] Add verification and reproducibility workflow
+- [x] Establish initial baseline version/revision inventory
+- [x] Begin mapping executable and data structures
+- [x] Begin source reconstruction
+- [ ] Classify and reconstruct remaining ARM9 overlays
+- [ ] Document and reconstruct assets, scripts, and formats
+- [ ] Establish preservation-clean full-ROM matching workflow
 
 ## 📚 Documentation
 
 | Document | Purpose |
 | --- | --- |
+| [Decompilation bootstrap](docs/BOOTSTRAP.md) | Observed NDS layout, Black/White identity pass, and initial executable plan |
+| [Matched overlay 74](docs/overlays/overlay_0074.md) | First byte-matching reconstructed executable unit |
 | [Project status](docs/PROJECT_STATUS.md) | Current stage, coverage, validation level, and next milestones |
 | [Roadmap](docs/ROADMAP.md) | Recommended decompilation phases and long-term progression |
 | [Version coverage](docs/VERSIONS.md) | Regions, languages, revisions, updates, builds, and hashes |
@@ -53,13 +58,13 @@ ROM images and redistributed ROM binaries are **not included**. The repository i
 
 ## 🧱 Repository structure
 
-As real project material is reconstructed, the repository may grow into areas such as `src/`, `include/`, `data/`, `assets/`, `tools/`, `tests/`, and `manifests/`. Empty directory trees are not created only for appearance, and platform-specific structure should follow verified target architecture rather than another generation's layout.
+Real reconstructed material is added only when evidence exists. Active areas now include `src/`, `linker/`, `tools/`, `docs/`, and `manifests/`; further `include/`, `data/`, `assets/`, and `tests/` areas will be added as verified material is reconstructed rather than as empty placeholders.
 
 See [Repository Structure](docs/REPOSITORY_STRUCTURE.md) for the full organization policy.
 
 ## 🔬 Research and verification
 
-Research findings should identify the relevant target version or revision and clearly separate hypotheses from observed, reproduced, or matched results. Use the repository's Research and Verification issue templates when tracking substantial findings.
+Research findings identify the relevant target version or revision and clearly separate hypotheses from observed, reproduced, or matched results. A **Matched** executable unit means its reconstructed decompressed payload has been compared byte-for-byte with the identified source input; it does not imply that the full source ROM is preservation-clean.
 
 ## 🤝 Contributing
 
