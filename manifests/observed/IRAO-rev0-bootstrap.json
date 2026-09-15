@@ -1,0 +1,87 @@
+{
+  "schema": "gen5-bootstrap-observation-v1",
+  "target": {
+    "title": "Pokemon White Version",
+    "game_code": "IRAO",
+    "region": "USA/Europe",
+    "language": "English",
+    "rom_version": 0,
+    "unit_code": 2
+  },
+  "input_identity": {
+    "size": 268435456,
+    "crc32": "EDCD5161",
+    "md5": "8dfef9a099e1269af5c1fcf9d7736a11",
+    "sha1": "f94d4578956487c09fee20809a591e858017769e",
+    "sha256": "93e4f473ce9a0543bccf2e689ecd07ab4fcc39dd00fb4f194343cbd5e70e17ed",
+    "preservation_status": "known-underdump",
+    "notes": "SweeTnDs-era image. Public preservation references catalogue this hash/serial family as a bad or underdumped USA/Europe English image. Keep observations from this input distinct from canonical clean-dump matching."
+  },
+  "canonical_clean_reference": {
+    "md5": "77c34ba77f8fa44e7caf04f695db0560",
+    "sha1": "bc696a0dfb448c7b3a8a206f0f8214411a039208",
+    "status": "reference-only; clean image not supplied in this workspace"
+  },
+  "nds_header": {
+    "game_title": "POKEMON W",
+    "maker_code": "01",
+    "device_capacity_code": 11,
+    "arm9": {
+      "rom_offset": 16384,
+      "entry_address": 33572864,
+      "ram_address": 33570816,
+      "size": 456868,
+      "sha256": "4d2fffd55c538fa50b02dbc589d82baefcfdb059d3d5fe1f0c90f0eb5fc4018e"
+    },
+    "arm7": {
+      "rom_offset": 2915840,
+      "entry_address": 37224448,
+      "ram_address": 37224448,
+      "size": 167812,
+      "sha256": "fea30d7fb24ff1cf24306a5aff971593bab5ff7925d0d0fe49237b96ce6dbdae"
+    },
+    "fnt": {
+      "offset": 3083776,
+      "size": 1040
+    },
+    "fat": {
+      "offset": 3085312,
+      "size": 3872
+    },
+    "arm9_overlay_table": {
+      "offset": 473600,
+      "size": 7584,
+      "entry_count": 237
+    },
+    "arm7_overlay_table": {
+      "offset": 0,
+      "size": 0,
+      "entry_count": 0
+    },
+    "banner_offset": 3089408,
+    "rom_size_field": 205231104,
+    "header_size": 16384
+  },
+  "filesystem_summary": {
+    "fat_entry_count": 484,
+    "named_fnt_file_count": 247,
+    "named_narc_archive_count": 237
+  },
+  "black_white_comparison": {
+    "fat_entry_count": 484,
+    "byte_identical_entries": 299,
+    "different_entries": 185,
+    "different_named_entries": 5,
+    "different_named_paths": [
+      "a/0/2/6",
+      "a/0/8/6",
+      "a/1/2/6",
+      "a/1/7/8",
+      "a/2/3/1"
+    ],
+    "arm7_byte_identical": true,
+    "arm9_byte_identical": false
+  },
+  "verification": "Observed",
+  "generated_with": "tools/nds_bootstrap_inventory.py"
+}
