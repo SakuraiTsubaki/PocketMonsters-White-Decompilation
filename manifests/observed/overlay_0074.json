@@ -1,0 +1,46 @@
+{
+  "schema": "gen5-overlay-match-v1",
+  "target": {
+    "game_code": "IRAO",
+    "rom_version": 0,
+    "overlay_id": 74,
+    "file_id": 74
+  },
+  "observed": {
+    "load_address": "0x021F5500",
+    "ram_size": 544,
+    "bss_size": 0,
+    "static_init_start": "0x021F5718",
+    "static_init_end": "0x021F571C",
+    "compressed_size": 240,
+    "compressed_sha256": "3f6e0b5e5fd5657870a1ae256b41e4826d8d322fe8de71bc43b4c3b2ed1eb970",
+    "decompressed_sha256": "2767b34270fa1efc66b86b92568caf6f2fde8680946bdd9f6480f5d3bbb8a366"
+  },
+  "reconstruction": {
+    "source": "src/overlay/overlay_0074.s",
+    "linker_script": "linker/overlays/overlay_0074.ld",
+    "output_size": 544,
+    "output_sha256": "2767b34270fa1efc66b86b92568caf6f2fde8680946bdd9f6480f5d3bbb8a366",
+    "byte_match": true,
+    "toolchain_observed": {
+      "clang": "17.0.0",
+      "lld": "17.0.0",
+      "target": "armv5te-none-eabi",
+      "mode": "Thumb"
+    },
+    "commands": [
+      "clang --target=armv5te-none-eabi -mthumb -c src/overlay/overlay_0074.s -o overlay_0074.o",
+      "ld.lld -T linker/overlays/overlay_0074.ld overlay_0074.o -o overlay_0074.elf",
+      "llvm-objcopy -O binary overlay_0074.elf overlay_0074.bin"
+    ]
+  },
+  "structure": {
+    "entry_size": 20,
+    "entry_count": 26,
+    "table_offset": "0x10",
+    "static_init_offset": "0x218",
+    "semantic_identity": "unverified"
+  },
+  "verification": "Matched",
+  "notes": "Matched against the decompressed overlay payload observed in the supplied IRAO underdump. This does not by itself promote the full ROM input to preservation-clean status. Symbol names are structural/provisional until semantic identity is verified."
+}
