@@ -1,11 +1,26 @@
 {
   "repository": "SakuraiTsubaki/PocketMonsters-White-Decompilation",
   "target": "Pocket Monsters White",
-  "platform_family": "Nintendo DS",
+  "platform_family": "Nintendo DS / DSi-enhanced",
   "generation": "Generation V",
-  "identity_status": "unselected",
-  "release": null,
-  "region": null,
-  "revision": null,
-  "hashes": []
+  "identity_status": "supplied_dump_identified_noncanonical",
+  "release": "Pokemon White Version (English USA/Europe, DSi Enhanced)",
+  "region": "USA/Europe English",
+  "revision": "Version 1.0 / ROM header revision 0",
+  "game_code": "IRAO",
+  "supplied_dump": {
+    "filename": "Pokemon.White.Version.EUR.NDS-SweeTnDs.nds",
+    "size_bytes": 268435456,
+    "crc32": "EDCD5161",
+    "md5": "8dfef9a099e1269af5c1fcf9d7736a11",
+    "sha1": "f94d4578956487c09fee20809a591e858017769e",
+    "sha256": "93e4f473ce9a0543bccf2e689ecd07ab4fcc39dd00fb4f194343cbd5e70e17ed",
+    "status": "faulty early scene dump; DSi-specific data missing; analysis input only"
+  },
+  "canonical_reference": {
+    "crc32": "B552501C",
+    "sha1": "bc696a0dfb448c7b3a8a206f0f8214411a039208",
+    "status": "clean USA/EUR Version 1.0 reference expected for matching reconstruction"
+  },
+  "rom_binary_policy": "keep ROM binaries outside Git; commit all reproducible non-ROM analysis and patches"
 }
