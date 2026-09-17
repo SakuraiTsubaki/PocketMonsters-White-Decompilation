@@ -1,0 +1,57 @@
+id,scope,category,name,status,priority,notes
+INPUT-001,White supplied dump,input-integrity,Missing DSi-specific data in SweeTnDs dump,confirmed,blocker,Do not use as clean matching baseline; retain only for structural comparison
+GENV-BTL-001,BW/B2W2,battle,Triple Battle softlock,candidate,blocker,Reproduce then patch party/position validation
+GENV-BTL-002,BW/B2W2,battle,0 damage glitch,candidate,high,Clamp final damage after all modifiers
+GENV-BTL-003,BW/B2W2,battle,Baton Pass Own Tempo confusion timing,candidate,medium,Verify status cure trigger order
+GENV-BTL-004,BW/B2W2,battle,Charge Beam additional-effect overflow,candidate,high,Verify effect chance arithmetic width and cap
+GENV-BTL-005,BW/B2W2,battle,Choice item lock persists after item removal,candidate,high,Clear lock state when choice effect is no longer applicable
+GENV-BTL-006,BW/B2W2,battle,Confusion HP-threshold item activation delay,candidate,high,Run held-item HP checks after confusion self-damage
+GENV-BTL-007,BW/B2W2,battle,HP display desynchronization,candidate,high,Unify in-battle and party HP recalculation
+GENV-BTL-008,BW-confirmed,battle,Fainted Pokémon state after HP recalculation,candidate,blocker,Derived from HP desync; can lock Single Battle
+GENV-BTL-009,BW/B2W2,battle,Impossible move selection by Triple Battle AI,candidate,high,Reject inaccessible moves before random fallback
+GENV-BTL-010,BW/B2W2,battle,Low-HP cry red-bar oversight,candidate,low,Verify intended cry filter for red HP
+GENV-BTL-011,BW/B2W2,battle,Prize money display overflow,candidate,medium,Expand formatted amount width beyond five digits
+GENV-BTL-012,BW/B2W2,battle,Shed Shell switch failure,candidate,high,Locate stale trapping/switchability state
+GENV-BTL-013,BW/B2W2,battle,Sky Drop plus Gravity lock,candidate,blocker,Force both battlers out of semi-invulnerable state
+GENV-BTL-014,BW/B2W2,battle,Battle sprite clipping,candidate,low,Correct sprite/platform clipping bounds
+GENV-BTL-015,BW/B2W2,battle,Trick Room speed modulo overflow,candidate,high,Replace modulo formulation with order-safe comparison
+GENV-BTL-016,BW/B2W2,battle,Opponent AI Ability storage,candidate,high,Reset remembered immunity Ability when active target changes
+BW-BTL-001,BW,battle,Gym Leader final-Pokémon music delay,candidate,low,Decouple music transition from dialogue cut-in
+GENV-UI-001,BW/B2W2,ui,Box change menu-sprite corruption,candidate,medium,Invalidate/reload box sprite cache on Switch Box path
+GENV-UI-002,BW/B2W2,ui,Card Album next-page cry leak,candidate,low,Prevent hidden next-page Wonder Card selection audio
+GENV-TXT-001,BW/B2W2,text,Censored-word normalization mismatch,candidate,medium,Normalize blacklist and input through the same case/kana transform
+GENV-BOOT-001,BW/B2W2,boot,Game Freak logo A/B input freeze,candidate,medium,Debounce/serialize skip input state
+GENV-DATA-001,BW/B2W2,data,TM94 Rock Smash wrong type icon,candidate,low,Use Fighting-type icon metadata
+BW-NET-001,BW,network,GTS morphing glitch,candidate,high,Requires protocol/state reproduction against preserved or reconstructed service behavior
+BW-NET-002,BW,network,GTS repeated-search state glitch,candidate,medium,Reset search result state after trade
+BW-NET-003,BW,network,GTS freeze after empty Trainer slot,candidate,blocker,Bounds/null check selected result slot
+BW-NET-004,BW,network,GTS Trainer display omissions,candidate,high,Validate result-list compaction and rendering
+BW-MAP-001,BW,map,Liberty Garden Fly marker oversight,candidate,low,Correct flyability marker state
+BW-UI-001,BW,ui,PC red X disappears after box rename,candidate,low,Restore close-button render state after name-entry return
+GENV-OW-001,BW/B2W2,overworld,Castelia Street passerby collision oversight,candidate,medium,Resolve bicycle movement against passerby displacement
+GENV-OW-002,BW/B2W2,graphics,Driftveil short-bridge black-tile error,candidate,low,Correct tile/occlusion geometry
+GENV-OW-003,BW/B2W2,overworld,Icirrus Gym non-solid rocks,candidate,medium,Correct collision flags; verify intended trainer gating
+GENV-AUD-001,BW/B2W2,audio,Underground music state lost after save/reset,candidate,medium,Persist or recompute pitch/tempo layer from map floor
+GENV-AUD-002,BW/B2W2,audio,Music speed state leaks through Dig/Escape Rope,candidate,medium,Reset underground playback modifier on map transition
+GENV-OW-004,BW/B2W2,graphics,Route 3 tall-grass grid misalignment,candidate,low,Correct map tile spacing/placement
+GENV-AUD-003,BW/B2W2,audio,Surf music continues after item pickup transition,candidate,medium,Force field BGM reevaluation after dismount/item event
+GENV-AUD-004,BW/B2W2,audio,Variable scoring state persists or fails after Fly/Teleport,candidate,medium,Recompute dynamic instrument layer from arrival coordinates
+BW-OW-001,BW,overworld,Cafe Warehouse interaction collision/void oversight,candidate,low,Restrict interaction hitboxes to intended cabinets
+BW-OW-002,BW,overworld,Dreamyard invisible wall,candidate,medium,Correct collision tile west of basement stairs
+BW-OW-003,BW,graphics,Dust cloud graphical glitch,candidate,low,Reproduce and identify particle/tile invalidation defect
+BW-OW-004,BW,overworld,Landing on person or item,candidate,high,Validate landing destination occupancy before placement
+BW-OW-005,BW,overworld,Nacrene Gym bookcase oversight,candidate,low,Correct interaction/collision scripting
+BW-OW-006,BW,overworld,Nimbasa shift glitch,candidate,high,Reproduce movement/event state desynchronization
+BW-OW-007,BW,overworld,Opelucid Gym air walk,candidate,high,Correct movement/collision during gym mechanism state
+BW-OW-008,BW,overworld,Opelucid Gym pedestal oversight,candidate,medium,Correct pedestal event/collision state
+BW-OW-009,BW,graphics,Opelucid Gym shadowed tiles,candidate,low,Correct tile lighting/shadow metadata
+BW-OW-010,BW,overworld,Opelucid Gym Surf oversight,candidate,high,Disallow invalid Surf activation/placement
+BW-OW-011,BW,overworld,Relic Castle oversight,candidate,medium,Reproduce and localize map/script condition
+BW-OW-012,BW,event,Village Bridge Sandwich Shop speech-bubble speaker mismatch,candidate,low,Bind bubble to requesting NPC
+BW-OW-013,BW,overworld,Walking Trainer pathing glitch,candidate,medium,Handle blocked corner direction transition
+BW-OW-014,BW,overworld,Weather removal via season clock change plus catch,candidate,medium,Reapply weather after RTC/season-derived state changes
+BW-JP-BTL-001,BW Japanese,battle,Wellspring Cave all-fainted party,candidate,blocker,Regional path must guarantee at least one healthy party member after partner battle
+BW-JP-OW-001,BW Japanese,overworld,Nimbasa Gym Trainer persists on coaster track,candidate,high,Correct defeated-trainer event flag/object removal
+BW-JP-DATA-001,BW Japanese,data,TM67 Retaliate wrong Dark-type icon,candidate,low,Use Normal-type icon metadata
+ROBUST-001,BW,robustness,Out-of-range species and glitch-species indices reachable under corrupted or modified state,candidate,high,Add defensive bounds checks without deleting preserved unused data
+ROBUST-002,BW,robustness,Invalid party/box/menu state should fail safely,candidate,high,Replace crashes/softlocks with deterministic recovery paths
